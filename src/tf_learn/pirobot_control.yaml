@@ -1,0 +1,9 @@
+pi_robot:
+    joint_state_controller:
+        type: joint_state_controller/JointStateController
+        publish_rate: 50
+    
+    left_shoulder_forward_join_position_controller:
+        type: effort_controllers/JointPositionController
+        join: left_shoulder_forward_joint
+        pid: {p: 100.0, i: 0.01, d: 10.0}
